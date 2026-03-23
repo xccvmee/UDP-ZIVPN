@@ -25,6 +25,8 @@ hash -r
 
 <pre><code>wget -O /usr/local/bin/menu https://github.com/xccvmee/UDP-ZIVPN/releases/download/Latest/menu-amd64
 </code></pre>
+<pre><code>chmod +x /usr/local/bin/menu
+</code></pre>
 
 ### UPDATE SCRIPT
 
