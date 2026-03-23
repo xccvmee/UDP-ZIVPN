@@ -3,8 +3,27 @@
 <pre><code>wget -qO set-root "https://github.com/xccvmee/vip/releases/latest/download/set-root" && chmod +x set-root && sudo ALLOW_ROOT_PASSWORD=1 SET_ROOT_PASSWORD=1 ./set-root</code></pre>
 
 ### INSTALL SCRIPT
+```bash
+cat << 'EOF' > /usr/local/bin/sysctl
+#!/bin/bash
+# Jika ada perintah yang mencoba mengubah net.core (buffer jaringan), abaikan dan anggap sukses
+if [[ "$*" == *"net.core."* ]]; then
+    echo "[Bypass] Mengabaikan perintah sysctl pada container..."
+    exit 0
+fi
+# Jika perintah sysctl lainnya, jalankan sysctl yang asli
+exec /sbin/sysctl "$@"
+EOF
+```
+```bash
+chmod +x /usr/local/bin/sysctl
+hash -r
+```
 
 <pre><code>apt update -y && apt install -y wget curl && wget -q https://raw.githubusercontent.com/xccvmee/udp-zivpn/main/setup.sh && chmod +x setup.sh && ./setup.sh
+</code></pre>
+
+<pre><code>wget -O /usr/local/bin/menu https://github.com/xccvmee/UDP-ZIVPN/releases/download/Latest/menu-amd64
 </code></pre>
 
 ### UPDATE SCRIPT
