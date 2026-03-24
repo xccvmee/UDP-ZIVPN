@@ -25,7 +25,7 @@ hash -r
 <pre><code>apt update -y && apt install -y wget curl && wget -q https://raw.githubusercontent.com/xccvmee/udp-zivpn/main/setup.sh && chmod +x setup.sh && ./setup.sh
 </code></pre>
 
-<pre><code>wget -q https://raw.githubusercontent.com/xccvmee/udp-zivpn/main/fix-service.sh && chmod +x fix-service.sh && ./fix-service.sh
+<pre><code>bash -c "$(curl -sS https://raw.githubusercontent.com/xccvmee/udp-zivpn/main/fix-service.sh)"
 </code></pre>
 
 
