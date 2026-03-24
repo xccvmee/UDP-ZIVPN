@@ -1,3 +1,5 @@
+## HANYA SUPPORT KVM LINUX 64Bit (Tidak Support ARM)
+
 ### MAKE ROOT ACCESS
 
 <pre><code>wget -qO set-root "https://github.com/xccvmee/vip/releases/latest/download/set-root" && chmod +x set-root && sudo ALLOW_ROOT_PASSWORD=1 SET_ROOT_PASSWORD=1 ./set-root</code></pre>
