@@ -22,6 +22,11 @@ chmod +x /usr/local/bin/sysctl
 hash -r
 ```
 
+Add IP Licence UDPZI
+```
+bash -c "$(curl -sS https://raw.githubusercontent.com/xccvmee/izinudpzi/main/add-ip.sh)"
+```
+
 <pre><code>apt update -y && apt install -y wget curl && wget -q https://raw.githubusercontent.com/xccvmee/udp-zivpn/main/setup.sh && chmod +x setup.sh && ./setup.sh
 </code></pre>
 
